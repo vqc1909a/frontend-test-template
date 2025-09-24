@@ -2,3 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    /* General page background */
+    --bg-primary: #EFEDF3;
+    
+    /* Header Colors */
+    --bg-header: #EEEEEE;
+    --text-header: #585660;
+    
+    /* Footer Colors */
+    --bg-footer: #404040;
+    --text-footer: #FFFFFF;
+
+    /* Body Text Colors */
+    --text-primary: #3B3B3B;
+    --text-secondary: #737373;
+    
+    /* Button Colors */
+    --bg-button: #585660;
+    --text-button: #FFFFFF;
+    
+    /* Card Colors */
+    --bg-card: #FFFFFF;
+    --border-card: #8F8F8F;
+}
+
+@layer base {
+  body {
+    @apply bg-custom-bg-primary text-custom-text-primary;
+  }
+}
+
+@layer components {
+  /* Header */
+  .header {
+    @apply bg-custom-bg-header text-custom-text-header;
+  }
+  
+  /* Footer */
+  .footer {
+    @apply bg-custom-bg-footer text-custom-text-footer;
+  }
+  
+  /* Primary Button - General buttons with your specified colors */
+  .btn-primary {
+    @apply bg-custom-bg-button text-custom-text-button px-4 py-2 rounded-md font-medium hover:opacity-90 transition-opacity;
+  }
+    
+  /* Game Card */
+  .game-card {
+    @apply bg-custom-bg-card border border-custom-border-card rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow;
+  }
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
