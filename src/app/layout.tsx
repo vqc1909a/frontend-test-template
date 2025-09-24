@@ -1,8 +1,6 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import type { Metadata } from "next";
+import { archivo, inter } from "./ui/fonts";
 
 export const metadata: Metadata = {
   title: "Apply Digital Test",
@@ -15,8 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
-  );
+		<html lang="en">
+			<body className={`${archivo.className} ${inter.className} antialiased`}>{children}</body>
+		</html>
+	);
 }
