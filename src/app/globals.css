@@ -57,6 +57,13 @@
   }
 }
 
+@layer utilities {
+  /* Container utility with project max-width */
+  .container-custom {
+    @apply max-w-[1280px] mx-auto px-4;
+  }  
+}
+
 input[type='number'] {
   -moz-appearance: textfield;
   appearance: textfield;
