@@ -26,6 +26,7 @@
     /* Card Colors */
     --bg-card: #FFFFFF;
     --border-card: #8F8F8F;
+  }
 }
 
 @layer base {
