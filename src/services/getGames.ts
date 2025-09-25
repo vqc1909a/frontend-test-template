@@ -1,6 +1,6 @@
 import {BACKEND_URL} from "../config/constants/environments";
 
-interface Game {
+export interface Game {
   id: string;
   title: string;
   price: string;
@@ -8,7 +8,7 @@ interface Game {
   image: string;
 }
 
-interface GamesResponse {
+export interface GamesResponse {
   games: Game[];
 	availableFilters: string[];
 	totalPages: number;
