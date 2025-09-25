@@ -5,7 +5,10 @@
 @layer base {
   :root {
     /* General page background */
-    --bg-primary: #EFEDF3;
+    --bg-primary: #FFFFFF;
+    
+    /* General border */
+    --border-primary: #EFEDF3;
     
     /* Header Colors */
     --bg-header: #EEEEEE;
