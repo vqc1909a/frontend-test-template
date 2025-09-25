@@ -51,7 +51,7 @@
   
   /* Primary Button - General buttons with your specified colors */
   .btn-primary {
-    @apply bg-custom-bg-button text-custom-text-button px-4 py-2 rounded-md font-medium hover:opacity-90 transition-opacity;
+    @apply bg-custom-bg-button text-custom-text-button py-4 px-6 rounded-lg font-bold uppercase hover:opacity-90 transition-opacity;
   }
     
   /* Game Card */
