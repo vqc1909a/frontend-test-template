@@ -20,7 +20,7 @@ export default function Catalog() {
 
 					<select
 						id="genre-filter"
-						className="flex-auto text-xl leading-6 tracking-[0.4px] bg-custom-bg-primary border-none text-custom-text-primary px-2 py-2 rounded-md focus:outline-none cursor-pointer"
+						className="genre-select flex-auto text-xl leading-6 tracking-[0.4px] bg-custom-bg-primary border-none text-custom-text-primary px-2 py-2 rounded-md focus:outline-none cursor-pointer"
 					>
 						<option value="">All</option>
 						{availableFilters.map((genre) => (
