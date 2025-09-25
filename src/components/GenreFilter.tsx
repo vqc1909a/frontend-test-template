@@ -1,10 +1,10 @@
-interface GenreFilterSelectProps {
+interface GenreFilterProps {
 	availableFilters: string[];
 }
 
-export const GenreFilterSelect = ({
+export const GenreFilter = ({
 	availableFilters,
-}: GenreFilterSelectProps) => {
+}: GenreFilterProps) => {
 	return (
 		<>
 			<div className="flex mb-10">
