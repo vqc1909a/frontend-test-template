@@ -3,7 +3,7 @@ import { GenreFilterSelect } from "./GenreFilterSelect";
 export const GenreFilter = () => {
 	return (
 		<>
-			<div className="flex mb-10">
+			<div className="flex">
 				<div className="flex items-center gap-6 w-full md:w-auto ml-auto">
 					<label
 						htmlFor="genre-filter"
