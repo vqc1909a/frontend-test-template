@@ -1,10 +1,6 @@
-interface GenreFilterProps {
-	availableFilters: string[];
-}
+import { GenreFilterSelect } from "./GenreFilterSelect";
 
-export const GenreFilter = ({
-	availableFilters,
-}: GenreFilterProps) => {
+export const GenreFilter = () => {
 	return (
 		<>
 			<div className="flex mb-10">
@@ -18,17 +14,7 @@ export const GenreFilter = ({
 
 					<div className="w-0.5 h-[22px] bg-custom-text-primary"></div>
 
-					<select
-						id="genre-filter"
-						className="genre-select flex-auto text-xl leading-6 tracking-[0.4px] bg-custom-bg-primary border-none text-custom-text-primary px-2 py-2 rounded-md focus:outline-none cursor-pointer"
-					>
-						<option value="">All</option>
-						{availableFilters.map((genre) => (
-							<option key={genre} value={genre}>
-								{genre}
-							</option>
-						))}
-					</select>
+					<GenreFilterSelect />
 				</div>
 			</div>
 
