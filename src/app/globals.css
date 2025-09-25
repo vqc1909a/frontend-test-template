@@ -56,7 +56,7 @@
     
   /* Game Card */
   .game-card {
-    @apply bg-custom-bg-card border-[.5px] border-custom-border-card rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-5;
+    @apply bg-custom-bg-card border-[.5px] border-custom-border-card rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4;
   }
 
   /* Genre Select */
@@ -65,7 +65,8 @@
 		background-image: url("/icons/icon-select-input.svg");
 		background-repeat: no-repeat;
 		background-position: right 0.5rem center;
-		padding-right: 3rem !important;
+
+    @apply !pr-8 sm:!pr-10 md:!pr-12;
 	}
 }
 
