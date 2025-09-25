@@ -59,6 +59,11 @@
     @apply bg-custom-bg-card border-[.5px] border-custom-border-card rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4;
   }
 
+  /* Game Card Button */
+  .game-card-button {
+    @apply bg-custom-bg-primary py-4 px-6 border rounded-lg border-custom-text-primary text-custom-text-primary font-bold text-base leading-4 tracking-[.03125em] uppercase hover:bg-custom-text-primary hover:text-custom-bg-primary transition-colors duration-300;
+  }
+
   /* Genre Select */
 	.genre-select {
 		appearance: none;
