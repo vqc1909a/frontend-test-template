@@ -20,7 +20,7 @@ export const GamesList = ({games}: GamesListProps) => {
 								src={game.image}
 								alt={game.name}
 								fill
-								className="object-cover hover:scale-105 transition-transform duration-300"
+								className="object-cover hover:scale-105 transition-transform duration-300 will-change-transform"
 							/>
 						</div>
 
@@ -39,6 +39,8 @@ export const GamesList = ({games}: GamesListProps) => {
 							</span>
 						</div>
 
+						{/* Add to Cart Button */}
+						<button className="game-card-button mt-2">Add to Cart</button>
 					</div>
 				))}
 			</div>
