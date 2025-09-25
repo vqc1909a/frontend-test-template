@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         "custom-bg-primary": "var(--bg-primary)",
+        "custom-border-primary": "var(--border-primary)",
         "custom-text-primary": "var(--text-primary)",
         "custom-text-secondary": "var(--text-secondary)",
         "custom-bg-button": "var(--bg-button)",
