@@ -17,8 +17,12 @@ export interface GamesResponse {
 	currentPage: number;
 }
 
-export const getGames = async (): Promise<GamesResponse> => {
-	const response = await fetch(`${BACKEND_URL}/api/games`, {
+export interface GetGamesProps {
+	genre?: string;
+	page?: number;
+}
+export const getGames = async ({genre = "", page = 1}: GetGamesProps): Promise<GamesResponse> => {
+	const response = await fetch(`${BACKEND_URL}/api/games?genre=${genre}&page=${page}`, {
 		method: "GET",
 		headers: {
 			"Content-Type": "application/json",
