@@ -1,7 +1,9 @@
-import {availableFilters} from "@/utils/endpoint";
 import { GenreFilterSelect } from "@/components/GenreFilterSelect";
+import { getGames } from "@/services/getGames";
 
 export default async function Catalog() {
+
+	const {games, availableFilters, totalPages, currentPage} = await getGames();
 
 	return (
 		<div className="container-custom py-8">
