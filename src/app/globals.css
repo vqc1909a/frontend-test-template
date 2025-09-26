@@ -51,12 +51,12 @@
   
   /* Primary Button - General buttons with your specified colors */
   .btn-primary {
-    @apply bg-custom-bg-button text-custom-text-button py-4 px-6 rounded-lg font-bold uppercase hover:opacity-90 transition-opacity;
+    @apply bg-custom-bg-button text-custom-text-button py-4 px-6 rounded-lg font-bold text-center uppercase hover:opacity-90 transition-opacity;
   }
     
   /* Game Card */
   .game-card {
-    @apply bg-custom-bg-card border-[.5px] border-custom-border-card rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4;
+    @apply bg-custom-bg-card border-[.5px] border-custom-border-card rounded-2xl p-6 flex flex-col gap-4;
   }
 
   /* Game Card Button */
