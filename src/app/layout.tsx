@@ -17,12 +17,12 @@ export default function RootLayout({
   return (
 		<html lang="en">
 			<body className={`${archivo.className} ${inter.className} antialiased`}>
-        <Header />
-        <main className="min-h-screen">
-          {children}
-        </main>
-        <Footer />
-      </body>
+				<Header />
+				<main className="min-h-screen md:overflow-hidden">
+					{children}
+				</main>
+				<Footer />
+			</body>
 		</html>
 	);
 }
