@@ -38,7 +38,7 @@ export const GameCard = ({game}: GameCardProps) => {
 			</div>
 
 			{/* Add to Cart Button */}
-			<GameCardButton gameId={game.id}/>
+			<GameCardButton game={game} />
 		</div>
 	);
 }
