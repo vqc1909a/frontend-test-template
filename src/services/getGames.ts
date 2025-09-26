@@ -27,11 +27,10 @@ export const getGames = async ({genre = "", page = 1}: GetGamesProps): Promise<G
 		headers: {
 			"Content-Type": "application/json",
 		},
-		cache: 'no-store'
-		// next: {
-		// 	revalidate: 21600, // Cache for 6 hours
-		// 	tags: ['games'] // For manual cache
-		// }
+		next: {
+			revalidate: 21600, // Cache for 6 hours
+			tags: ['games'] // For manual cache
+		}
 	});
 	if (!response.ok) {
 		const error = await response.json();
