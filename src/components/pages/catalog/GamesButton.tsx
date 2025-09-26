@@ -1,11 +1,16 @@
 "use client";
 
+import {getGames} from "@/services/getGames";
 import Link from "next/link";
-import { ReadonlyURLSearchParams, usePathname, useSearchParams } from "next/navigation";
-
+import {
+	ReadonlyURLSearchParams,
+	usePathname,
+	useSearchParams,
+} from "next/navigation";
+import {useEffect, useState} from "react";
 
 interface GamesButtonProps {
-  hasMorePages: boolean;
+	genre: string;
 	page: number;
 }
 
@@ -19,14 +24,35 @@ const createPageURL = (
 	return `${pathname}?${params.toString()}`;
 };
 
-export const GamesButton = ({hasMorePages, page}: GamesButtonProps) => {
-  const pathname = usePathname();
+export const GamesButton = ({genre, page}: GamesButtonProps) => {
+	const pathname = usePathname();
 	const searchParams = useSearchParams();
 
-	if (!hasMorePages) return;
+	const [totalPages, setTotalPages] = useState(1);
+	const [currentPage, setCurrentPage] = useState(1);
+
+	const hasMorePages = currentPage < totalPages;
+
+	useEffect(() => {
+		const getGamesService = async () => {
+			const {totalPages, currentPage} = await getGames({genre, page});
+			setTotalPages(totalPages);
+      setCurrentPage(currentPage)
+		};
+
+		getGamesService();
+	}, [genre, page]);
+
+	if (!hasMorePages) {
+		return null;
+	}
+
 	return (
 		<div className="flex justify-start items-center">
-			<Link href={createPageURL(page + 1, pathname, searchParams)} className="btn-primary">
+			<Link
+				href={createPageURL(currentPage + 1, pathname, searchParams)}
+				className="btn-primary"
+			>
 				See More
 			</Link>
 		</div>
