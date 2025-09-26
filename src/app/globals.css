@@ -41,12 +41,12 @@
 @layer components {
   /* Header */
   .header {
-    @apply bg-custom-bg-header text-custom-text-header;
+    @apply bg-custom-bg-header text-custom-text-header h-16 w-full;
   }
   
   /* Footer */
   .footer {
-    @apply bg-custom-bg-footer text-custom-text-footer;
+    @apply bg-custom-bg-footer text-custom-text-footer flex items-center justify-center h-[172px];
   }
   
   /* Primary Button - General buttons with your specified colors */
