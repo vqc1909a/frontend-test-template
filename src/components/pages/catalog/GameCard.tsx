@@ -1,5 +1,6 @@
 import { Game } from "@/services/getGames";
 import Image from "next/image";
+import { GameCardButton } from "./GameCardButton";
 
 interface GameCardProps {
   game: Game;
@@ -37,7 +38,7 @@ export const GameCard = ({game}: GameCardProps) => {
 			</div>
 
 			{/* Add to Cart Button */}
-			<button className="game-card-button mt-2">Add to Cart</button>
+			<GameCardButton gameId={game.id}/>
 		</div>
 	);
 }
