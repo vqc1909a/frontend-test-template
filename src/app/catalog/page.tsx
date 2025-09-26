@@ -1,8 +1,8 @@
 import { GamesButton } from "@/components/pages/catalog/GamesButton";
 import { GamesList } from "@/components/pages/catalog/GamesList";
 import { GenreFilter } from "@/components/pages/catalog/GenreFilter";
-import { getGames } from "@/services/getGames";
 import { Suspense } from "react";
+import { GamesListSkeleton } from "../ui/skeletons";
 
 export default async function Catalog(props: {searchParams?: {genre?: string, page?: string}}) {
 	const searchParams = props.searchParams;
@@ -18,11 +18,10 @@ export default async function Catalog(props: {searchParams?: {genre?: string, pa
 			<GenreFilter />
 
 			{/* Product Grid */}
-			<Suspense key={genre + page} fallback={<h1>Loading Component</h1>}>
+			<Suspense key={genre + page} fallback={<GamesListSkeleton count={6} />}>
 				<GamesList genre={genre} page={page} />
 			</Suspense>
 
-			{/* See More Button */}
 			<GamesButton genre={genre} page={page} />
 		</div>
 	);
