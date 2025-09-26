@@ -12,7 +12,11 @@ export const GenreFilterSelect = () => {
   const onChange = (event: ChangeEvent<HTMLSelectElement>) => {
     const genre = event.target.value;
     const params = new URLSearchParams(searchParams);
-    !!genre ? params.set("genre", genre) : params.delete("genre");
+    if(genre){
+      params.set("genre", genre)
+    }else{
+      params.delete("genre");
+    }
     replace(`${pathname}?${params.toString()}`);
   }
 
