@@ -1,11 +1,14 @@
-import {Game} from "@/services/getGames";
+import {Game, getGames} from "@/services/getGames";
 import Image from "next/image";
 
 interface GamesListProps {
-	games: Game[];
+	genre: string;
+	page: number;
 }
 
-export const GamesList = ({games}: GamesListProps) => {
+export const GamesList = async ({genre, page}: GamesListProps) => {
+	const {games} = await getGames({genre, page});
+	
 	return (
 		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
 			{games.map((game) => (
@@ -19,6 +22,7 @@ export const GamesList = ({games}: GamesListProps) => {
 							src={game.image}
 							alt={game.name}
 							fill
+							sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
 							className="object-cover hover:scale-105 transition-transform duration-300 will-change-transform"
 						/>
 					</div>
