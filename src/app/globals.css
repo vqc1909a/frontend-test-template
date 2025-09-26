@@ -67,7 +67,7 @@
   /* Genre Select */
 	.genre-select {
 		appearance: none;
-		background-image: url("/icons/icon-select-input.svg");
+		background-image: url("/icons/select-input-icon.svg");
 		background-repeat: no-repeat;
 		background-position: right 0.5rem center;
 
