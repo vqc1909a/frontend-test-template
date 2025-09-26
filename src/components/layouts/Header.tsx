@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const Header = () => {
 	return (
-		<header className="header h-16 w-full">
+		<header className="header">
 			<div className="container-custom h-full flex items-center justify-between text-custom-text-header">
 				{/* Logo/Title */}
 				<Link href="/catalog" className="flex items-center">
