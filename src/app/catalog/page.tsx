@@ -9,9 +9,6 @@ export default async function Catalog(props: {searchParams?: {genre?: string, pa
 	const genre = searchParams?.genre || "";
 	const page = Number(searchParams?.page || 1);
 
-	const {totalPages} = await getGames({genre, page});
-	const hasMorePages = page < totalPages;
-
 	return (
 		<div className="container-custom py-8 xs:py-10 md:py-12 flex flex-col gap-12">
 			<h2 className="uppercase md:normal-case text-2xl leading-7 md:text-4xl md:leading-10 font-bold text-left tracking-[0.4px]">
@@ -26,7 +23,7 @@ export default async function Catalog(props: {searchParams?: {genre?: string, pa
 			</Suspense>
 
 			{/* See More Button */}
-			<GamesButton hasMorePages={hasMorePages} page={page} />
+			<GamesButton genre={genre} page={page} />
 		</div>
 	);
 }
