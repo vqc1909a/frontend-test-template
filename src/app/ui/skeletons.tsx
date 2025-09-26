@@ -41,7 +41,7 @@ export const GamesButtonSkeleton = () => {
 	return (
 		<div className="flex justify-start items-center">
 			<div
-				className={`relative h-12 bg-gray-200 rounded-lg w-full md:w-32 animate-pulse ${shimmer}`}
+				className={`relative h-14 bg-gray-200 rounded-lg w-full md:w-32 animate-pulse ${shimmer}`}
 			>
 				{/* Invisible text to maintain proper button proportions */}
 				<div className="flex items-center justify-center h-full">
