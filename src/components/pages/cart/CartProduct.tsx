@@ -1,11 +1,11 @@
 import { Game } from "@/utils/endpoint";
 import Image from "next/image";
+import { CartProductButton } from "./CartProductButton";
 
 interface CartProductProps {
   item: Game,
-  removeFromCart: (gameId: string) => void
 }
-export const CartProduct = ({item, removeFromCart}: CartProductProps) => {
+export const CartProduct = ({item}: CartProductProps) => {
 	return (
 		<div className="cart-product">
 			{/* Cart item with fixed height */}
@@ -36,19 +36,7 @@ export const CartProduct = ({item, removeFromCart}: CartProductProps) => {
 				</div>
 
 				{/* Delete */}
-				<div className="h-full col-start-12 col-end-13 row-start-1 row-end-3 md:col-start-12 md:col-end-13 md:row-start-1 md:row-end-2 flex items-start justify-end md:py-2">
-					<button
-						className="py-2 px-0 md:px-2 md:py-0"
-						onClick={() => removeFromCart(item.id)}
-					>
-						<Image
-							src="/icons/delete-icon.svg"
-							alt="Delete"
-							width={12}
-							height={12}
-						/>
-					</button>
-				</div>
+				<CartProductButton productId={item.id} />
 			</div>
 		</div>
 	);
