@@ -73,6 +73,10 @@
 
     @apply !pr-8 sm:!pr-10 md:!pr-12;
 	}
+
+  .cart-product{
+    @apply [&:not(:last-child)]:border-b-[.5px] [&:not(:last-child)]:border-custom-border-card px-4 py-5
+  }
 }
 
 @layer utilities {
