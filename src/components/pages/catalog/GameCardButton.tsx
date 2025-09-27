@@ -1,13 +1,16 @@
 'use client'
 
+import { CartContext } from "@/utils/context/CartContext";
 import { Game } from "@/utils/endpoint";
 import { useCart } from "@/utils/hooks/useCart";
+import { useContext } from "react";
 interface GameCardButtonProps {
 	game: Game;
 }
 
 export const GameCardButton = ({game}: GameCardButtonProps) => {
-	const {addToCart, removeFromCart, isInCart, cartIsReady} = useCart();
+
+	const {addToCart, removeFromCart, isInCart, cartIsReady} = useContext(CartContext);
 	const productAdded = isInCart(game.id);
 
 	if (!cartIsReady) {
