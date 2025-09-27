@@ -10,8 +10,7 @@ export const GameCard = ({game}: GameCardProps) => {
 		<div className="game-card">
 			{/* Game Image */}
 			<div
-				className="relative overflow-hidden rounded-t-2xl"
-				style={{height: "240px"}}
+				className="relative overflow-hidden rounded-t-2xl h-[240px]"
 			>
 				<Image
 					src={game.image}
