@@ -19,7 +19,7 @@ export const Header = () => {
 					className="flex items-center hover:opacity-80 transition-opacity"
 				>
 					<Image
-						src="/icons/cart.svg"
+						src="/icons/cart-icon.svg"
 						alt="Cart"
 						width={24}
 						height={24}
