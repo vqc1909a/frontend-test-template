@@ -1,9 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { archivo, inter } from "./ui/fonts";
-import { Header } from "@/components/layouts/Header";
-import { Footer } from "@/components/layouts/Footer";
 import { AppLayout } from "@/components/layouts/AppLayout";
+import { CartProvider } from "@/utils/context/CartProvider";
 
 export const metadata: Metadata = {
   title: "Apply Digital Test",
@@ -18,7 +17,9 @@ export default function RootLayout({
   return (
 		<html lang="en">
 			<body className={`${archivo.className} ${inter.className} antialiased`}>
-				<AppLayout>{children}</AppLayout>
+				<CartProvider>
+					<AppLayout>{children}</AppLayout>
+				</CartProvider>
 			</body>
 		</html>
 	);
