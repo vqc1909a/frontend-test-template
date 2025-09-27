@@ -1,6 +1,6 @@
 'use client'
 
-import { Game } from "@/services/getGames";
+import { Game } from "@/utils/endpoint";
 import { useCart } from "@/utils/hooks/useCart";
 import { useEffect, useState } from "react";
 

@@ -1,5 +1,4 @@
-import {Game, getGames} from "@/services/getGames";
-import Image from "next/image";
+import {getGames} from "@/services/getGames";
 import { GameCard } from "./GameCard";
 
 interface GamesListProps {
