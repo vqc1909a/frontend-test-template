@@ -1,8 +1,7 @@
-'use client';
-import { Game } from "@/services/getGames";
 import {useState, useEffect} from "react";
+import { Game } from "../endpoint";
 
-interface CartItem {
+export interface CartItem {
 	product: Game;
 	quantity: number;
 }
@@ -37,7 +36,7 @@ export const useCart = () => {
 		setCart({
 			cartItems,
 			totalPrice
-		})
+		});
 	};
 
 	const removeFromCart = (gameId: string) => {
@@ -50,7 +49,7 @@ export const useCart = () => {
 		setCart({
 			cartItems: updatedCartItems,
 			totalPrice
-		})
+		});
 	};
 
 	const isInCart = (gameId: string) => {
@@ -66,10 +65,10 @@ export const useCart = () => {
 		}
 		//eslint-disable-next-line
 	}, []);
+
 	
 	return {
-		cartItems: cart.cartItems,
-		totalPrice: cart.totalPrice,
+		...cart,
 		addToCart,
 		removeFromCart,
 		isInCart,
