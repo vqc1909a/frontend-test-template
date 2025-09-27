@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { archivo, inter } from "./ui/fonts";
 import { Header } from "@/components/layouts/Header";
 import { Footer } from "@/components/layouts/Footer";
+import { AppLayout } from "@/components/layouts/AppLayout";
 
 export const metadata: Metadata = {
   title: "Apply Digital Test",
@@ -17,11 +18,7 @@ export default function RootLayout({
   return (
 		<html lang="en">
 			<body className={`${archivo.className} ${inter.className} antialiased`}>
-				<Header />
-				<main className="min-h-screen md:overflow-hidden">
-					{children}
-				</main>
-				<Footer />
+				<AppLayout>{children}</AppLayout>
 			</body>
 		</html>
 	);
