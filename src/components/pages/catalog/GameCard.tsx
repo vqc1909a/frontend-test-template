@@ -1,6 +1,6 @@
-import { Game } from "@/services/getGames";
 import Image from "next/image";
 import { GameCardButton } from "./GameCardButton";
+import { Game } from "@/utils/endpoint";
 
 interface GameCardProps {
   game: Game;
