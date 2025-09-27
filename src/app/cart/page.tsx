@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import { GamesListSkeleton } from "../ui/skeletons";
 import Link from "next/link";
 import Image from "next/image";
+import { CartContent } from "@/components/pages/cart/CartContent";
 
 export default async function Cart() {
 
@@ -34,7 +35,7 @@ export default async function Cart() {
 				</p>
 			</div>
 
-			
+			<CartContent />
 		</div>
 	);
 }
