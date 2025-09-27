@@ -26,7 +26,7 @@ export default async function Cart() {
 					Back to Catalog
 				</span>
 			</Link>
-			<div className="flex flex-col gap-2">
+			<div className="flex flex-col gap-3">
 				<h2 className="text-2xl leading-7 md:text-4xl md:leading-10 font-bold text-left tracking-[0.4px]">
 					Your Cart
 				</h2>
