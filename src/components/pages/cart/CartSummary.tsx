@@ -44,7 +44,12 @@ export const CartSummary = () => {
 				</div>
 			</div>
 			<div className="flex justify-start items-center">
-				<Link href={"/checkout"} className="btn-primary w-full capitalize">
+				<Link
+					href={"/checkout"}
+					className={`btn-primary w-full capitalize ${
+						cartItems.length ? "" : "pointer-events-none opacity-50"
+					}`}
+				>
 					Checkout
 				</Link>
 			</div>
