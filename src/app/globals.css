@@ -51,7 +51,7 @@
   
   /* Primary Button - General buttons with your specified colors */
   .btn-primary {
-    @apply bg-custom-bg-button text-custom-text-button py-4 px-6 rounded-lg font-bold text-center uppercase hover:opacity-90 transition-opacity;
+    @apply bg-custom-bg-button text-custom-text-button py-4 px-6 rounded-lg font-bold text-sm md:text-base text-center leading-4 tracking-[.03125em] uppercase hover:opacity-90 transition-opacity;
   }
     
   /* Game Card */
@@ -73,9 +73,15 @@
 
     @apply !pr-8 sm:!pr-10 md:!pr-12;
 	}
-
+  
+  /* Cart Product */
   .cart-product{
     @apply [&:not(:last-child)]:border-b-[.5px] [&:not(:last-child)]:border-custom-border-card px-4 py-5
+  }
+
+  /* Cart Summary */
+  .cart-summary {
+    @apply bg-custom-bg-card border-[.5px] border-custom-border-card rounded-lg p-6 flex flex-col gap-6;
   }
 }
 
