@@ -1,4 +1,4 @@
-import { areaNormal } from "@/app/ui/fonts";
+import {areaNormal} from "@/app/ui/fonts";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,7 +8,9 @@ export const Header = () => {
 			<div className="container-custom h-full flex items-center justify-between text-custom-text-header">
 				{/* Logo/Title */}
 				<Link href="/catalog" className="flex items-center">
-					<h1 className={`${areaNormal.className} text-2xl font-bold leading-6 tracking-[0.4px]`}>
+					<h1
+						className={`${areaNormal.className} text-2xl font-bold leading-6 tracking-wide`}
+					>
 						GamerShop
 					</h1>
 				</Link>

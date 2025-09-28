@@ -1,4 +1,4 @@
-import { GenreFilterSelect } from "./GenreFilterSelect";
+import {GenreFilterSelect} from "./GenreFilterSelect";
 
 export const GenreFilter = () => {
 	return (
@@ -7,7 +7,7 @@ export const GenreFilter = () => {
 				<div className="flex items-center gap-6 w-full md:w-auto ml-auto">
 					<label
 						htmlFor="genre-filter"
-						className="font-bold text-xl leading-6 tracking-[0.4px]"
+						className="font-bold text-xl leading-6 tracking-wide"
 					>
 						Genre
 					</label>
