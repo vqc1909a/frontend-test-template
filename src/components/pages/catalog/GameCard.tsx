@@ -14,6 +14,7 @@ export const GameCard = ({game}: GameCardProps) => {
 					src={game.image}
 					alt={game.name}
 					fill
+					sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
 					className="object-cover hover:scale-105 transition-transform duration-300 will-change-transform"
 				/>
 			</div>
