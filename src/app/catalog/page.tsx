@@ -21,8 +21,6 @@ export default async function Catalog(props: {searchParams?: {genre?: string, pa
 			<Suspense key={genre + page} fallback={<GamesListSkeleton count={6} />}>
 				<GamesList genre={genre} page={page} />
 			</Suspense>
-
-			<GamesButton genre={genre} page={page} />
 		</div>
 	);
 }
