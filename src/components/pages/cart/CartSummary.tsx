@@ -2,7 +2,7 @@
 import { useContext } from "react";
 import { CartContext } from "@/utils/context/CartContext";
 import Link from "next/link";
-import { calculateItemTotal, calculateItemTotalPrice } from "@/utils/helpers/cart";
+import { calculateItemTotalPrice } from "@/utils/helpers/cart";
 
 export const CartSummary = () => {
 	const { cartItems, totalPrice } = useContext(CartContext);
@@ -34,7 +34,7 @@ export const CartSummary = () => {
 					))}
 				</div>
 				{/* Order Total */}
-				<div className="flex items-center justify-between mb-6">
+				<div className="flex items-center justify-between mb-4">
 					<h3 className="text-custom-text-primary font-bold text-xl leading-6 tracking-wide flex-1 mr-3 truncate">
 						Order Total
 					</h3>
