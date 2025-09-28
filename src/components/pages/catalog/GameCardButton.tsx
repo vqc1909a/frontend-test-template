@@ -15,7 +15,7 @@ export const GameCardButton = ({game}: GameCardButtonProps) => {
 
 	if (!cartIsReady) {
 		return (
-			<button className="game-card-button mt-2" disabled>
+			<button className="game-card-button mt-1" disabled>
 				Loading...
 			</button>
 		);
@@ -23,7 +23,7 @@ export const GameCardButton = ({game}: GameCardButtonProps) => {
 
 	return (
 		<button 
-			className="game-card-button mt-2" 
+			className="game-card-button mt-1" 
 			onClick={productAdded ? () => removeFromCart(game.id) : () => addToCart(game)}
 		>
 			{productAdded ? "Remove" : "Add to Cart"}
