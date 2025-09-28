@@ -2,7 +2,7 @@
 import { useContext } from "react";
 import { CartContext } from "@/utils/context/CartContext";
 import Link from "next/link";
-import { calculateItemTotal } from "@/utils/helpers/cart";
+import { calculateItemTotal, calculateItemTotalPrice } from "@/utils/helpers/cart";
 
 export const CartSummary = () => {
 	const { cartItems, totalPrice } = useContext(CartContext);
@@ -20,7 +20,7 @@ export const CartSummary = () => {
 					</p>
 				</div>
 				{/* Order Items */}
-				
+
 				<div className="flex flex-col border-b border-custom-border-card py-6 gap-4">
 					{cartItems.map(({product, quantity}) => (
 						<div key={product.id} className="flex items-center justify-between">
@@ -28,7 +28,7 @@ export const CartSummary = () => {
 								{product.name}
 							</h3>
 							<span className="text-custom-text-primary font-normal text-lg leading-6 tracking-wide whitespace-nowrap flex-shrink-0">
-								${calculateItemTotal(product.price, quantity)}
+								${calculateItemTotalPrice(product.price, quantity)}
 							</span>
 						</div>
 					))}
@@ -44,10 +44,7 @@ export const CartSummary = () => {
 				</div>
 			</div>
 			<div className="flex justify-start items-center">
-				<Link
-					href={"/checkout"}
-					className="btn-primary w-full capitalize"
-				>
+				<Link href={"/checkout"} className="btn-primary w-full capitalize">
 					Checkout
 				</Link>
 			</div>
