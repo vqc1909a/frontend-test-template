@@ -9,14 +9,11 @@ export const GameCard = ({game}: GameCardProps) => {
   return (
 		<div className="game-card">
 			{/* Game Image */}
-			<div
-				className="relative overflow-hidden rounded-t-2xl h-[240px]"
-			>
+			<div className="relative overflow-hidden rounded-t-2xl h-[240px]">
 				<Image
 					src={game.image}
 					alt={game.name}
 					fill
-					sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
 					className="object-cover hover:scale-105 transition-transform duration-300 will-change-transform"
 				/>
 			</div>
@@ -28,7 +25,7 @@ export const GameCard = ({game}: GameCardProps) => {
 
 			{/* Product Name and Price */}
 			<div className="flex items-center justify-between">
-				<h3 className="text-custom-text-primary font-bold text-lg leading-5 tracking-wide flex-1 mr-3 truncate">
+				<h3 className="text-custom-text-primary font-bold text-lg leading-5 tracking-wide flex-1 mr-3 line-clamp-2 overflow-hidden text-ellipsis">
 					{game.name}
 				</h3>
 				<span className="text-custom-text-primary font-bold text-xl leading-6 tracking-wide whitespace-nowrap">
