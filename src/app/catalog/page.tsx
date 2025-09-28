@@ -11,7 +11,7 @@ export default async function Catalog(props: {searchParams?: {genre?: string, pa
 
 	return (
 		<div className="container-custom py-8 xs:py-10 md:py-12 flex flex-col gap-12">
-			<h2 className="uppercase md:normal-case text-2xl leading-7 md:text-4xl md:leading-10 font-bold text-left tracking-[0.4px]">
+			<h2 className="uppercase md:normal-case text-2xl leading-7 md:text-4xl md:leading-10 font-bold text-left tracking-wide">
 				Top Sellers
 			</h2>
 			{/* Genre Filter Select */}
