@@ -1,18 +1,15 @@
 "use client";
 
-import { GamesButtonSkeleton } from "@/app/ui/skeletons";
-import {getGames} from "@/services/getGames";
 import Link from "next/link";
 import {
 	ReadonlyURLSearchParams,
 	usePathname,
 	useSearchParams,
 } from "next/navigation";
-import {useEffect, useState} from "react";
 
 interface GamesButtonProps {
-	genre: string;
-	page: number;
+	totalPages: number;
+	currentPage: number;
 }
 
 const createPageURL = (
@@ -25,31 +22,12 @@ const createPageURL = (
 	return `${pathname}?${params.toString()}`;
 };
 
-export const GamesButton = ({genre, page}: GamesButtonProps) => {
+export const GamesButton = ({totalPages, currentPage}: GamesButtonProps) => {
 	const pathname = usePathname();
 	const searchParams = useSearchParams();
 
-  const [loading, setLoading] = useState(false);
-	const [totalPages, setTotalPages] = useState(1);
-	const [currentPage, setCurrentPage] = useState(1);
 
 	const hasMorePages = currentPage < totalPages;
-
-	useEffect(() => {
-		const getGamesService = async () => {
-			setLoading(true);
-			const {totalPages, currentPage} = await getGames({genre, page});
-			setTotalPages(totalPages);
-      setCurrentPage(currentPage);
-			setLoading(false);
-		};
-
-		getGamesService();
-	}, [genre, page]);
-  
-  if(loading) {
-    return <GamesButtonSkeleton />
-  }
 
 	if (!hasMorePages) {
 		return null;
