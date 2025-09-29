@@ -6,7 +6,7 @@ interface GameListContentProps {
 }
 export const GamesListContent = ({games}: GameListContentProps) => {
 	if(!games.length) return (
-		<div className="text-xl md:text-2xl font-bold text-custom-text-primary text-start">
+		<div className="text-xl md:text-2xl font-bold text-custom-text-primary text-start" aria-label="no-games-found">
 			No Games Found
 		</div>
 	);

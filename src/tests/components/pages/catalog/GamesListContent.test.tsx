@@ -48,6 +48,6 @@ describe("Tests on GamesListContent Component", () => {
 				<GamesListContent games={[]} />
 			</CartProvider>
 		);
-		expect(screen.getByText(/no games found/i)).toBeInTheDocument();
+		expect(screen.getByLabelText("no-games-found")).toBeInTheDocument();
 	});
 });
