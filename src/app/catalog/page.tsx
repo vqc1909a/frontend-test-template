@@ -1,6 +1,5 @@
-import { GamesButton } from "@/components/pages/catalog/GamesButton";
 import { GamesList } from "@/components/pages/catalog/GamesList";
-import { GenreFilter } from "@/components/pages/catalog/GenreFilter";
+import { GamesGenreFilter } from "@/components/pages/catalog/GamesGenreFilter";
 import { Suspense } from "react";
 import { GamesListSkeleton } from "../ui/skeletons";
 
@@ -14,10 +13,8 @@ export default async function Catalog(props: {searchParams?: {genre?: string, pa
 			<h2 className="uppercase md:normal-case text-2xl leading-7 md:text-4xl md:leading-10 font-bold text-left tracking-wide">
 				Top Sellers
 			</h2>
-			{/* Genre Filter Select */}
-			<GenreFilter />
+			<GamesGenreFilter />
 
-			{/* Product Grid */}
 			<Suspense key={genre + page} fallback={<GamesListSkeleton count={6} />}>
 				<GamesList genre={genre} page={page} />
 			</Suspense>
