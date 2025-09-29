@@ -66,12 +66,15 @@
 
   /* Genre Select */
 	.genre-select {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 		appearance: none;
 		background-image: url("/icons/select-input-icon.svg");
 		background-repeat: no-repeat;
-		background-position: right 0.5rem center;
+		background-position: right 0.25rem center;
 
-    @apply !pr-8 sm:!pr-10 md:!pr-12;
+    @apply !pr-6 sm:!pr-9 md:!pr-12;
 	}
   
   /* Cart Product */
