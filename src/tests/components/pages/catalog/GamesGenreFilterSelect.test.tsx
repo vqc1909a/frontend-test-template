@@ -38,7 +38,6 @@ describe("Tests on GamesGenreFilterSelect Component", () => {
 
 	test("should render the genre filter select", async () => {
 		render(<GamesGenreFilterSelect  />);
-    screen.debug(screen.getByRole("combobox"));
 
 		expect(screen.getByRole("combobox")).toBeInTheDocument();
 		// +1 by this <option value="">All</option>
