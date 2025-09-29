@@ -33,17 +33,12 @@ describe("Tests on GamesButton Component", () => {
 
 	test("should generate correct next page URL", () => {
 		render(<GamesButton totalPages={5} currentPage={2} />);
-		expect(screen.getByRole("link", {name: /see more/i})).toHaveAttribute(
-			"href",
-			"/catalog?genre=&page=3"
-		);
+		expect(screen.getByRole("link", {name: /see more/i})).toHaveAttribute("href", "/catalog?genre=&page=3");
 	});
 
 	test("should work with different search params", async () => {
 		const mockUseSearchParams = vi.mocked(await import("next/navigation")).useSearchParams;
-		mockUseSearchParams.mockReturnValueOnce(
-			createMockSearchParams({genre: "rpg"}) as any
-		);
+		mockUseSearchParams.mockReturnValueOnce(createMockSearchParams({genre: "rpg"}) as any);
 
 		render(<GamesButton totalPages={10} currentPage={3} />);
 
