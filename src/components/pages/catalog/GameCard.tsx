@@ -26,7 +26,7 @@ export const GameCard = ({game}: GameCardProps) => {
 
 			{/* Product Name and Price */}
 			<div className="flex items-center justify-between">
-				<h3 className="text-custom-text-primary font-bold text-lg leading-5 tracking-wide flex-1 mr-3 line-clamp-2 overflow-hidden text-ellipsis">
+				<h3 className="text-custom-text-primary font-bold text-lg leading-5 tracking-wide flex-1 mr-3 line-clamp-1 overflow-hidden text-ellipsis">
 					{game.name}
 				</h3>
 				<span className="text-custom-text-primary font-bold text-xl leading-6 tracking-wide whitespace-nowrap">
