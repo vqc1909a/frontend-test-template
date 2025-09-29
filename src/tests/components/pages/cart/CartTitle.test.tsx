@@ -5,7 +5,7 @@ import {cleanup, render, screen} from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 
 
-const mockCartItems = vi.fn(() => []);
+const mockCartItems = vi.fn();
 
 vi.mock("@/utils/hooks/useCart", async () => {
 	const originalModule = await vi.importActual("@/utils/hooks/useCart");
