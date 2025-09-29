@@ -7,7 +7,7 @@ interface GameCardProps {
 }
 export const GameCard = ({game}: GameCardProps) => {
   return (
-		<div className="game-card">
+		<div className="game-card" aria-label="game-card">
 			{/* Game Image */}
 			<div className="relative overflow-hidden rounded-t-2xl h-[240px]">
 				<Image
