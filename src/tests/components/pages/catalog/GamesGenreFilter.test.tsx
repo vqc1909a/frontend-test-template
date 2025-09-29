@@ -41,6 +41,5 @@ describe("Tests on GamesGenreFilter Component", () => {
 		render(<GamesGenreFilter  />);
 
 		expect(screen.getByLabelText(/genre/i)).toBeInTheDocument();
-		screen.debug(screen.getByLabelText(/genre/i));
 	});
 });
