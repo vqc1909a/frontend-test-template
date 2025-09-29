@@ -38,12 +38,12 @@ describe("Tests on GamesButton Component", () => {
 
 	test("should work with different search params", async () => {
 		const mockUseSearchParams = vi.mocked(await import("next/navigation")).useSearchParams;
-		mockUseSearchParams.mockReturnValueOnce(createMockSearchParams({genre: "rpg"}) as any);
+		mockUseSearchParams.mockReturnValueOnce(createMockSearchParams({genre: "Action"}) as any);
 
 		render(<GamesButton totalPages={10} currentPage={3} />);
 
 		const seeMoreButton = screen.getByRole("link", {name: /see more/i});
-		expect(seeMoreButton).toHaveAttribute("href", "/catalog?genre=rpg&page=4");
+		expect(seeMoreButton).toHaveAttribute("href", "/catalog?genre=Action&page=4");
 	});
 
 	test("should work without any parameters", async () => {
