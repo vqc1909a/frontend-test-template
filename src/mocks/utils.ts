@@ -1,4 +1,5 @@
-import { ITEMS_PER_PAGE } from "@/app/api/games/route";
+const ITEMS_PER_PAGE = 12;
+
 import { allGames, availableFilters } from "@/utils/endpoint";
 
 export const createMockSearchParams = (params: Record<string, string> = {}) => {
@@ -9,7 +10,6 @@ export const createMockSearchParams = (params: Record<string, string> = {}) => {
 
 	return searchParams;
 };
-
 
 export const getGamesFromParams = ({genre = "", page = 1}) => {
 		let games = allGames;
