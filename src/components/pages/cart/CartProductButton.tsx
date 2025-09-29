@@ -18,7 +18,7 @@ export const CartProductButton = ({productId}: CartProductButtonProps) => {
 			>
 				<Image
 					src="/icons/delete-icon.svg"
-					alt="Delete"
+					alt="Delete Product"
 					width={12}
 					height={12}
 				/>
