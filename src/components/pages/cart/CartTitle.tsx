@@ -9,7 +9,7 @@ export const CartTitle = () => {
 			<h2 className="text-2xl leading-7 md:text-4xl md:leading-10 font-bold text-left tracking-wide">
 				Your Cart
 			</h2>
-			<p className="text-xl leading-6 md:text-2xl md:leading-7 tracking-wide font-normal">
+			<p className="text-xl leading-6 md:text-2xl md:leading-7 tracking-wide font-normal" aria-label="cart-items">
 				{cartItems.length} items
 			</p>
 		</div>
