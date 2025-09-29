@@ -39,6 +39,7 @@ describe("Tests on CartProduct Component", () => {
 			</CartProvider>
 		);
 
+		expect(screen.getByLabelText("cart-product")).toBeInTheDocument();
 		expect(screen.getByRole('img', {name: item.name})).toBeInTheDocument();
 		expect(screen.getByLabelText("product-genre")).toHaveTextContent(item.genre);
 		expect(screen.getByRole("heading", {level: 3, name: item.name})).toBeInTheDocument();

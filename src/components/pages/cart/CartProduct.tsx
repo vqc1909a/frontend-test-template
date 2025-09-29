@@ -7,7 +7,7 @@ interface CartProductProps {
 }
 export const CartProduct = ({item}: CartProductProps) => {
 	return (
-		<div className="cart-product">
+		<div className="cart-product" aria-label="cart-product">
 			{/* Cart item with fixed height */}
 			<div className="grid grid-cols-12 grid-rows-[repeat(4,minmax(0,58px))] sm:grid-rows-[repeat(4,minmax(0,78px))] md:grid-rows-[repeat(1,minmax(0,156px))] gap-y-5 gap-x-0 md:gap-x-5 md:gap-y-5 items-center">
 				{/* Image */}
