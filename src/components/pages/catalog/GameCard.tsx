@@ -20,7 +20,7 @@ export const GameCard = ({game}: GameCardProps) => {
 			</div>
 
 			{/* Genre */}
-			<p className="text-custom-text-secondary text-base leading-4 font-bold uppercase tracking-normal">
+			<p className="text-custom-text-secondary text-base leading-4 font-bold uppercase tracking-normal" aria-label="game-genre">
 				{game.genre}
 			</p>
 
@@ -29,7 +29,7 @@ export const GameCard = ({game}: GameCardProps) => {
 				<h3 className="text-custom-text-primary font-bold text-lg leading-5 tracking-wide flex-1 mr-3 line-clamp-1 overflow-hidden text-ellipsis">
 					{game.name}
 				</h3>
-				<span className="text-custom-text-primary font-bold text-xl leading-6 tracking-wide whitespace-nowrap">
+				<span className="text-custom-text-primary font-bold text-xl leading-6 tracking-wide whitespace-nowrap" aria-label="game-price">
 					${game.price}
 				</span>
 			</div>
