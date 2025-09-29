@@ -1,10 +1,11 @@
+import Image from "next/image";
 import {GamesGenreFilterSelect} from "./GamesGenreFilterSelect";
 
 export const GamesGenreFilter = () => {
 	return (
 		<>
 			<div className="flex">
-				<div className="flex items-center gap-6 w-full md:w-auto ml-auto">
+				<div className="flex items-center gap-6 w-full sm:w-auto ml-auto">
 					<label
 						htmlFor="genre-filter"
 						className="font-bold text-xl leading-6 tracking-wide"
@@ -12,8 +13,7 @@ export const GamesGenreFilter = () => {
 						Genre
 					</label>
 
-					<div className="w-0.5 h-[22px] bg-custom-text-primary"></div>
-
+					<div className="w-px h-[22px] bg-custom-text-primary"></div>
 					<GamesGenreFilterSelect />
 				</div>
 			</div>

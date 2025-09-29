@@ -20,7 +20,7 @@ export const GamesGenreFilterSelect = () => {
   return (
 		<select
 			id="genre-filter"
-			className="genre-select flex-auto text-xl leading-6 tracking-[0.4px] bg-custom-bg-primary border-none text-custom-text-primary px-2 py-2 rounded-md focus:outline-none cursor-pointer"
+			className="genre-select flex-1 text-xl leading-6 tracking-[0.4px] bg-custom-bg-primary border-none text-custom-text-primary px-2 py-2 rounded-md focus:outline-none cursor-pointer"
 			onChange={onChange}
 			defaultValue={searchParams.get("genre") || ""}
 		>
