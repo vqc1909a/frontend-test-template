@@ -10,11 +10,6 @@ interface GamesListProps {
 export const GamesList = async ({genre, page}: GamesListProps) => {
 	const {games, totalPages, currentPage} = await getGames({genre, page});
 	
-	if(!games.length) return (
-		<div className="text-xl md:text-2xl font-bold text-custom-text-primary text-start">
-			No Games Found
-		</div>
-	);
 	return (
 		<>
 			<GamesListContent games={games} />
