@@ -38,6 +38,7 @@ describe("Tests on GameCard Component", () => {
 				<GameCard game={game} />
 			</CartProvider>
 		);
+		expect(screen.getByLabelText("game-card")).toBeInTheDocument();
 		expect(screen.getByRole("img", {name: new RegExp(game.name, "i")})).toBeInTheDocument();
 		expect(screen.getByLabelText(/game-genre/i)).toHaveTextContent(game.genre);
 		expect(screen.getByRole("heading", {level: 3, name: new RegExp(game.name, "i")})).toBeInTheDocument();
