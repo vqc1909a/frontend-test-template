@@ -1,6 +1,6 @@
-import {GenreFilterSelect} from "./GenreFilterSelect";
+import {GamesGenreFilterSelect} from "./GamesGenreFilterSelect";
 
-export const GenreFilter = () => {
+export const GamesGenreFilter = () => {
 	return (
 		<>
 			<div className="flex">
@@ -14,7 +14,7 @@ export const GenreFilter = () => {
 
 					<div className="w-0.5 h-[22px] bg-custom-text-primary"></div>
 
-					<GenreFilterSelect />
+					<GamesGenreFilterSelect />
 				</div>
 			</div>
 

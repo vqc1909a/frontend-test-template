@@ -4,7 +4,7 @@ import { usePathname, useSearchParams, useRouter } from 'next/navigation';
 import { ChangeEvent } from 'react';
 
 
-export const GenreFilterSelect = () => {
+export const GamesGenreFilterSelect = () => {
   const searchParams = useSearchParams();
 	const pathname = usePathname();
 	const {replace} = useRouter();
