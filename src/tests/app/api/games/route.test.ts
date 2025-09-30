@@ -2,6 +2,7 @@ import {GET} from "@/app/api/games/route";
 import {cleanup} from "@testing-library/react";
 import {afterEach, beforeEach, describe, expect, test, vi} from "vitest";
 import {availableFilters} from "../../../../utils/endpoint";
+import { BACKEND_URL } from "@/config/constants/environments";
 
 vi.mock("@/utils/endpoint", async () => {
 	const actual = await vi.importActual("@/utils/endpoint");
@@ -23,7 +24,7 @@ describe("Tests on API Route: /api/games", () => {
 	});
 
 	test("should return games with default parameters", async () => {
-		const request = new Request("http://localhost:3000/api/games");
+		const request = new Request(`${BACKEND_URL}/api/games`);
 
 		const response = await GET(request);
 		const data = await response.json();
@@ -37,7 +38,7 @@ describe("Tests on API Route: /api/games", () => {
 	test("should return games filtered by genre", async () => {
 		const genre = "Action";
 		const request = new Request(
-			`http://localhost:3000/api/games?genre=${genre}`
+			`${BACKEND_URL}/api/games?genre=${genre}`
 		);
 		const response = await GET(request);
 		const data = await response.json();
@@ -51,7 +52,7 @@ describe("Tests on API Route: /api/games", () => {
 	test("should return games for a specific page", async () => {
 		const page = 2;
 		const request = new Request(
-			`http://localhost:3000/api/games?page=${page}`
+			`${BACKEND_URL}/api/games?page=${page}`
 		);
 		const response = await GET(request);
 		const data = await response.json();
