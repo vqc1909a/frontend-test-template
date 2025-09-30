@@ -10,7 +10,7 @@ vi.mock("next/navigation", () => {
 	const mockReplace = vi.fn();
 
 	return {
-		usePathname: vi.fn(() => "/catalog"),
+		usePathname: vi.fn(() => "/"),
 		useSearchParams: vi.fn(() =>
 			createMockSearchParams({genre: "", page: "1"})
 		),
@@ -65,6 +65,6 @@ describe("Tests on GamesGenreFilterSelect Component", () => {
 
 		render(<GamesGenreFilterSelect  />);
 		await userEvent.selectOptions(screen.getByRole("combobox"), "Shooter");
-		expect(mockReplace).toHaveBeenCalledWith("/catalog?genre=Shooter");
+		expect(mockReplace).toHaveBeenCalledWith("/?genre=Shooter");
 	});
 });

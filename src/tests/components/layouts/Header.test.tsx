@@ -21,7 +21,7 @@ describe("Tests on Header Layout", () => {
 		render(<Header />);
 		expect(getHomeLink()).toBeInTheDocument();
 		expect(getCartLink()).toBeInTheDocument();
-		expect(getHomeLink()).toHaveAttribute("href", "/catalog");
+		expect(getHomeLink()).toHaveAttribute("href", "/");
 		expect(getCartLink()).toHaveAttribute("href", "/cart");
 		expect(within(getHomeLink()).getByRole("heading", {level: 1, name: /gamershop/i})).toBeInTheDocument();
 		expect(within(getCartLink()).getByRole("img", {name: /cart/i})).toBeInTheDocument();

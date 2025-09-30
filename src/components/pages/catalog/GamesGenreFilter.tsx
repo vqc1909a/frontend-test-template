@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {GamesGenreFilterSelect} from "./GamesGenreFilterSelect";
 
 export const GamesGenreFilter = () => {

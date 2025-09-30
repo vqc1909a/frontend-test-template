@@ -5,7 +5,7 @@ export const Footer = () => {
 	return (
 		<div className="footer">
 			<div className="container-custom">
-        <Link href="/catalog" className="flex items-center">
+        <Link href="/" className="flex items-center">
           <Image
             src="/icons/Apply Digital Logo.svg"
             alt="Apply Digital Logo"

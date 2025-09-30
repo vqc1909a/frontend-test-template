@@ -7,7 +7,7 @@ export const Header = () => {
 		<header className="header">
 			<div className="container-custom h-full flex items-center justify-between text-custom-text-header">
 				{/* Logo/Title */}
-				<Link href="/catalog" className="flex items-center">
+				<Link href="/" className="flex items-center">
 					<h1
 						className={`${areaNormal.className} text-2xl font-bold leading-6 tracking-wide`}
 					>

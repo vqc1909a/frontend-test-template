@@ -4,7 +4,7 @@ import {GamesButton} from "@/components/pages/catalog/GamesButton";
 import {createMockSearchParams} from "@/tests/utils";
 
 vi.mock("next/navigation", () => ({
-	usePathname: vi.fn(() => "/catalog"),
+	usePathname: vi.fn(() => "/"),
 	useSearchParams: vi.fn(() =>
 		createMockSearchParams({genre: "", page: "1"})
 	),
@@ -33,7 +33,7 @@ describe("Tests on GamesButton Component", () => {
 
 	test("should generate correct next page URL", () => {
 		render(<GamesButton totalPages={5} currentPage={2} />);
-		expect(screen.getByRole("link", {name: /see more/i})).toHaveAttribute("href", "/catalog?genre=&page=3");
+		expect(screen.getByRole("link", {name: /see more/i})).toHaveAttribute("href", "/?genre=&page=3");
 	});
 
 	test("should work with different search params", async () => {
@@ -43,7 +43,7 @@ describe("Tests on GamesButton Component", () => {
 		render(<GamesButton totalPages={10} currentPage={3} />);
 
 		const seeMoreButton = screen.getByRole("link", {name: /see more/i});
-		expect(seeMoreButton).toHaveAttribute("href", "/catalog?genre=Action&page=4");
+		expect(seeMoreButton).toHaveAttribute("href", "/?genre=Action&page=4");
 	});
 
 	test("should work without any parameters", async () => {
@@ -53,6 +53,6 @@ describe("Tests on GamesButton Component", () => {
 		render(<GamesButton totalPages={3} currentPage={1} />);
 		
 		const seeMoreButton = screen.getByRole("link", { name: /see more/i });
-		expect(seeMoreButton).toHaveAttribute("href", "/catalog?page=2");
+		expect(seeMoreButton).toHaveAttribute("href", "/?page=2");
 	});
 });
