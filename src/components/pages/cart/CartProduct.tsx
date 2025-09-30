@@ -18,6 +18,11 @@ export const CartProduct = ({item}: CartProductProps) => {
 						fill
 						className="object-cover"
 					/>
+					{item.isNew && (
+						<div className="absolute top-1 left-1 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded uppercase">
+							New
+						</div>
+					)}
 				</div>
 
 				{/* Game Details */}
@@ -31,14 +36,20 @@ export const CartProduct = ({item}: CartProductProps) => {
 					<h3 className="text-custom-text-primary text-lg leading-5 md:text-xl md:leading-6 font-bold tracking-wide line-clamp-1 overflow-hidden text-ellipsis">
 						{item.name}
 					</h3>
-					<p className="text-custom-text-secondary text-base leading-5 font-normal tracking-normal mr-0 md:mr-4 line-clamp-3 overflow-hidden text-ellipsis" aria-label="product-description">
+					<p
+						className="text-custom-text-secondary text-base leading-5 font-normal tracking-normal mr-0 md:mr-4 line-clamp-3 overflow-hidden text-ellipsis"
+						aria-label="product-description"
+					>
 						{item.description}
 					</p>
 				</div>
 
 				{/* Price */}
 				<div className="h-full col-start-11 col-end-13 row-start-3 row-end-5 md:col-start-11 md:col-end-12 md:row-start-1 md:row-end-2 flex items-end justify-end md:py-2">
-					<span className="text-custom-text-primary font-bold text-lg leading-5 md:text-xl md:leading-6 tracking-wide" aria-label="product-price">
+					<span
+						className="text-custom-text-primary font-bold text-lg leading-5 md:text-xl md:leading-6 tracking-wide"
+						aria-label="product-price"
+					>
 						${item.price}
 					</span>
 				</div>
