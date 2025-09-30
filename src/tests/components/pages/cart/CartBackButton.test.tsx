@@ -1,7 +1,7 @@
 import {cleanup, render, screen, within} from "@testing-library/react";
 import {afterEach, beforeEach, describe, expect, test, vi} from "vitest";
 import {GamesButton} from "@/components/pages/catalog/GamesButton";
-import {createMockSearchParams} from "@/mocks/utils";
+import {createMockSearchParams} from "@/tests/utils";
 import { CartBackButton } from "@/components/pages/cart/CartBackButton";
 
 vi.mock("next/navigation", () => ({

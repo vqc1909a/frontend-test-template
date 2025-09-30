@@ -1,7 +1,7 @@
 import {cleanup, render, screen} from "@testing-library/react";
 import {afterEach, beforeAll, beforeEach, describe, expect, test, vi} from "vitest";
 import {CartProvider} from "@/utils/context/CartProvider";
-import { createMockSearchParams, getGamesFromParams } from "@/mocks/utils";
+import { createMockSearchParams, getGamesFromParams } from "@/tests/utils";
 import { GamesList } from "@/components/pages/catalog/GamesList";
 
 vi.mock("@/services/getGames", async () => {

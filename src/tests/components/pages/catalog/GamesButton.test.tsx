@@ -1,7 +1,7 @@
 import {cleanup, render, screen} from "@testing-library/react";
 import {afterEach, beforeEach, describe, expect, test, vi} from "vitest";
 import {GamesButton} from "@/components/pages/catalog/GamesButton";
-import {createMockSearchParams} from "@/mocks/utils";
+import {createMockSearchParams} from "@/tests/utils";
 
 vi.mock("next/navigation", () => ({
 	usePathname: vi.fn(() => "/catalog"),

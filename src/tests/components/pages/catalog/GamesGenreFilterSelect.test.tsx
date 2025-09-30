@@ -2,7 +2,7 @@ import {cleanup, render, screen} from "@testing-library/react";
 import {afterEach, beforeEach, describe, expect, test, vi} from "vitest";
 import { GamesGenreFilterSelect } from "@/components/pages/catalog/GamesGenreFilterSelect";
 import { availableFilters } from "@/utils/endpoint";
-import { createMockSearchParams } from "@/mocks/utils";
+import { createMockSearchParams } from "@/tests/utils";
 import {userEvent} from "@testing-library/user-event";
 
 
