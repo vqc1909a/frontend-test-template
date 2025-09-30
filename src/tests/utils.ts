@@ -11,7 +11,7 @@ export const createMockSearchParams = (params: Record<string, string> = {}) => {
 	return searchParams;
 };
 
-export const getGamesFromParams = ({genre = "", page = 1}) => {
+export const getGamesFromParams = ({genre = "", page = 1} = {}) => {
 		let games = allGames;
 	
 		if (genre) {

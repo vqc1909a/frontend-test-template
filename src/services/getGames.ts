@@ -12,7 +12,7 @@ export interface GetGamesProps {
 	genre?: string;
 	page?: number;
 }
-export const getGames = async ({genre = "", page = 1}: GetGamesProps): Promise<GamesResponse> => {
+export const getGames = async ({genre = "", page = 1}: GetGamesProps = {}): Promise<GamesResponse> => {
 	const response = await fetch(`${BACKEND_URL}/api/games?genre=${genre}&page=${page}`, {
 		method: "GET",
 		headers: {
