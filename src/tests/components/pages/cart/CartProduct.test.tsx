@@ -1,9 +1,7 @@
-import { CartProductButton } from "@/components/pages/cart/CartProductButton";
 import { CartProvider } from "@/utils/context/CartProvider";
 import { allGames } from "@/utils/endpoint";
 import {cleanup, render, screen, within} from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
-import {userEvent} from "@testing-library/user-event";
 import { CartProduct } from "@/components/pages/cart/CartProduct";
 
 
