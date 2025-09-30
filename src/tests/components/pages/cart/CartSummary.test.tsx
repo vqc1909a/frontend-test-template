@@ -52,7 +52,6 @@ describe("Tests on CartSummary Component", () => {
 		expect(screen.getByRole("heading", {level: 4, name: /order total/i})).toBeInTheDocument();
 		expect(screen.getByLabelText("cart-total-price")).toBeInTheDocument();
 		expect(screen.getByLabelText("cart-total-price")).toHaveTextContent(`$ ${totalPrice}`);
-		screen.debug();
 		expect(screen.getByRole("link", {name: /checkout/i})).toBeInTheDocument();
 		expect(screen.getByRole("link", {name: /checkout/i})).toHaveAttribute("href", "/checkout");
 	});

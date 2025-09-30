@@ -25,7 +25,6 @@ describe("Tests on CartBackButton Component", () => {
 	const getBackToCatalog = () => screen.getByRole("link", {name: /back to catalog/i})
 	test("should render the button correctly", () => {
 		render(<CartBackButton />);
-		screen.debug();
 
 		expect(getBackToCatalog()).toBeInTheDocument();
 		expect(getBackToCatalog()).toHaveAttribute("href", "/");

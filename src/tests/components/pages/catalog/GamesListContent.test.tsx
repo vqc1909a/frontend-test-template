@@ -39,7 +39,6 @@ describe("Tests on GamesListContent Component", () => {
 			</CartProvider>
 		);
 		expect(screen.getAllByLabelText("game-card").length).toBe(games.length);
-		screen.debug();
 	});
 	
 	test("should show 'No Games Found' message when there are no games", () => {
