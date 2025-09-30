@@ -19,7 +19,7 @@ export const CartProduct = ({item}: CartProductProps) => {
 						className="object-cover"
 					/>
 					{item.isNew && (
-						<div className="absolute top-1 left-1 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded uppercase">
+						<div className="absolute top-1 left-1 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded uppercase" aria-label="new-product">
 							New
 						</div>
 					)}
