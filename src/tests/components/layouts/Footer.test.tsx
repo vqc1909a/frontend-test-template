@@ -18,7 +18,7 @@ describe("Tests on Header Layout", () => {
 
 	test("should render the footer correctly", () => {
 		render(<Footer />);
-		screen.debug();
+		expect(screen.getByRole("contentinfo")).toBeInTheDocument();
 		expect(getHomeLink()).toBeInTheDocument();
 		expect(getHomeLink()).toHaveAttribute("href", "/");
 		expect(within(getHomeLink()).getByRole("img", {name: /apply digital logo/i})).toBeInTheDocument();

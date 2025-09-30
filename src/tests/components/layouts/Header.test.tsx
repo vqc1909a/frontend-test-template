@@ -19,6 +19,7 @@ describe("Tests on Header Layout", () => {
 
 	test("should render the header correctly", () => {
 		render(<Header />);
+		expect(screen.getByRole("banner")).toBeInTheDocument();
 		expect(getHomeLink()).toBeInTheDocument();
 		expect(getCartLink()).toBeInTheDocument();
 		expect(getHomeLink()).toHaveAttribute("href", "/");

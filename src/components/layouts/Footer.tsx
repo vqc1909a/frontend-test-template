@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const Footer = () => {
 	return (
-		<div className="footer">
+		<footer className="footer">
 			<div className="container-custom">
         <Link href="/" className="flex items-center">
           <Image
@@ -15,6 +15,6 @@ export const Footer = () => {
           />
         </Link>
 			</div>
-		</div>
+		</footer>
 	);
 };
